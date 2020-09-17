@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Block\Product\View" type="Fera\Ai\Block\Footer\Product\View" />
+    <preference for="Magento\Checkout\Block\Onepage\Success" type="Fera\Ai\Block\Footer\Checkout\Success"/>
+    <type name="Fera\Ai\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Fera\Ai\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">FeraAiLogger</argument>
+            <argument name="handlers" xsi:type="array">
+                <item name="system" xsi:type="object">Fera\Ai\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

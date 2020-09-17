@@ -1,0 +1,6 @@
+<?php if ($block->isEnabled()): ?>
+    <script>
+        window.fera = window.fera || [];
+        window.fera.push('order', <?= $block->getOrderJson(); ?>);
+    </script>
+<?php endif; ?>
