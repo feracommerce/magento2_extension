@@ -5,7 +5,7 @@
     <default>
         <fera_ai>
             <general>
-                <enable>1</enable>
+                <enabled>1</enabled>
                 <debug_mode>0</debug_mode>
             </general>
             <fera_ai_group>
