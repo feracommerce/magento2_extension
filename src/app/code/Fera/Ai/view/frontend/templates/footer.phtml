@@ -8,7 +8,7 @@
             store_pk: "<?= $block->getPublicKey(); ?>",
             api_url: "<?= $block->getApiUrl(); ?>"
         });
-        window.fera.push('loadPlatformAdapter', "magento");
+        window.fera.push('loadPlatformAdapter', "magento2");
 
         <?php $shopperData = $block->getShopperData() ?>
         <?php if ($shopperData): ?>
