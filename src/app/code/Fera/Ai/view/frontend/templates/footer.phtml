@@ -17,6 +17,7 @@
 
         window.fera.push('setCart', <?= $block->getCartJson(); ?>);
     </script>
+    <?= $this->getChildHtml('fera_ai.footer.product.list'); ?>
     <?= $this->getChildHtml('fera_ai.footer.product.view'); ?>
     <?= $this->getChildHtml('fera_ai.footer.checkout.success'); ?>
     <script async type="application/javascript" src="<?= $block->getJsUrl(); ?>"></script>
