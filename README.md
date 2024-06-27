@@ -4,7 +4,7 @@ This extension makes it easy to use Fera.ai to offer customers a live shopping e
 
 ## Installation
 ### 1. Create An Account
-Go to https://app.fera.ai/signup?platform=magento and create a new account.
+Go to https://app.fera.ai/signup?platform=magento2 and create a new account.
 
 ### 2. Follow the instructions to install the extension.
 You will be provided with a link to the latest install files. Follow the instructions to install the app into your Magento store.
