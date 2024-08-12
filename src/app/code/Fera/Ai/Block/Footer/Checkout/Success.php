@@ -95,6 +95,12 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
                 'email'         => $this->customerSession->getCustomer()->getEmail(),
                 'address'       => $address
             ];
+        } else {
+            $customer = [
+                'id'            => $order->getCustomerId(),
+                'first_name'    => $order->getCustomerFirstname(),
+                'email'         => $order->getCustomerEmail()
+            ];
         }
 
         $currencyCode = $this->_storeManager->getStore()->getCurrentCurrencyCode();
