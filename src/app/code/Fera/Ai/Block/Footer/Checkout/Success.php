@@ -95,12 +95,6 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
                 'email'         => $this->customerSession->getCustomer()->getEmail(),
                 'address'       => $address
             ];
-        } else {
-            $customer = [
-                'id'            => $order->getCustomerId(),
-                'first_name'    => $order->getCustomerFirstname(),
-                'email'         => $order->getCustomerEmail()
-            ];
         }
 
         $currencyCode = $this->_storeManager->getStore()->getCurrentCurrencyCode();
@@ -116,6 +110,7 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
             'modified_at'   => $this->helper->formatDate($order->getUpdatedAt()),
             'line_items'    => $this->helper->serializeQuoteItems($order->getAllItems()),
             'customer'      => $customer,
+            'tags'          => 'backpack', 
             'source_name'   => 'web'
         ];
 

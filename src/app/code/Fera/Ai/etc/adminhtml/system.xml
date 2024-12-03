@@ -31,13 +31,16 @@
                     <label>Secret Key</label>
                     <comment>You can find your API keys at https://app.fera.ai/store/settings?tab=api</comment>
                 </field>
-                <field id="api_url" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="app_url" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>App Url</label>
+                </field>
+                <field id="api_url" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Api Url</label>
                 </field>
-                <field id="js_url" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="js_url" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Js Url</label>
                 </field>
             </group>
-        </section>
+         </section>
     </system>
 </config>

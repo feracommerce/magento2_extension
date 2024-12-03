@@ -133,9 +133,22 @@ class Data extends AbstractHelper
     {
         $publicKey = $this->getPublicKey();
         $secretKey = $this->getSecretKey();
+        $appUrl = $this->getAppUrl();
         $apiUrl = $this->getApiUrl();
         $jsUrl = $this->getJsUrl();
-        return !empty($publicKey) && !empty($secretKey) && !empty($apiUrl) && !empty($jsUrl);
+        return !empty($publicKey) && !empty($secretKey) && !empty($appUrl) && !empty($apiUrl) && !empty($jsUrl);
+    }
+
+    /**
+     * The URL path to the APP (https). For example: https://app.fera.ai
+     * @return string
+     */
+    public function getAppUrl()
+    {
+        return $this->scopeConfig->getValue(
+            'fera_ai/fera_ai_group/app_url',
+            ScopeInterface::SCOPE_STORE
+        );
     }
 
     /**
