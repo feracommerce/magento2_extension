@@ -51,7 +51,7 @@ class OrderStatusUpdate implements ObserverInterface
       $shipment = $observer->getEvent()->getShipment();
       $orderId = $shipment->getOrder()->getId();
       $shipmentData = [
-                      'delivered_at' => $this->helper->formatDate($shipment->getCreatedAt()),
+                      'fulfilled_at' => $this->helper->formatDate($shipment->getCreatedAt()),
                       'external_id' => $orderId,
                       ];
       $this->updateOrderStatus($shipmentData);
