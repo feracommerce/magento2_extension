@@ -30,7 +30,7 @@ class OrderStatusUpdate implements ObserverInterface
      * Send put request to update order status
      */
     public function updateOrderStatus($data) {
-        $url = $this->helper->getApiUrl()."v3/private/orders/".$data['external_id']."/deliver";
+        $url = $this->helper->getApiUrl()."v3/private/orders/".$data['external_id']."fulfill";
         $this->_curl->addHeader("Content-Type", "application/json");
         $this->_curl->addHeader("SECRET-KEY", $this->helper->getSecretKey());
         $this->_curl->setOption(CURLOPT_CUSTOMREQUEST, "PUT");
