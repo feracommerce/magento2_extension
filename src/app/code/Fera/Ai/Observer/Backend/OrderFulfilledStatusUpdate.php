@@ -7,7 +7,7 @@ use Magento\Framework\HTTP\Client\Curl as Curl;
 
 use Fera\Ai\Helper\Data as FeraHelper;
 
-class OrderStatusUpdate implements ObserverInterface
+class OrderFulfilledStatusUpdate implements ObserverInterface
 {
 
     protected $_curl;
@@ -30,13 +30,13 @@ class OrderStatusUpdate implements ObserverInterface
      * Send put request to update order status
      */
     public function updateOrderStatus($data) {
-        $url = $this->helper->getApiUrl()."v3/private/orders/".$data['external_id']."fulfill";
+        $url = $this->helper->getApiUrl()."v3/private/orders/".$data['external_id']."/fulfill";
         $this->_curl->addHeader("Content-Type", "application/json");
         $this->_curl->addHeader("SECRET-KEY", $this->helper->getSecretKey());
         $this->_curl->setOption(CURLOPT_CUSTOMREQUEST, "PUT");
         $this->_curl->post($url, $this->helper->jsonEncode($data));
         $response = $this->_curl->getBody();
-       // $this->helper->log("Order status is updated for order". $response);
+        // $this->helper->log("Order status is updated for order". $response);
         //echo $response;
     }
 
