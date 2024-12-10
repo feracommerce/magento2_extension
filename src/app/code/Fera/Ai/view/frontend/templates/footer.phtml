@@ -4,22 +4,15 @@
         window.feraStandaloneMode = true;
         window.fera = window.fera || [];
         <?= $block->getDebugJs(), PHP_EOL; ?>
-        window.fera.push('configure', {
-            store_pk: "<?= $block->getPublicKey(); ?>",
-            api_url: "<?= $block->getApiUrl(); ?>"
-        });
         window.fera.push('loadPlatformAdapter', "magento2");
+        window.fera.push('configure', {
+            api_key: "<?= $block->getPublicKey(); ?>",
+            app_url: "<?= $block->getAppUrl(); ?>",
+            api_url: "<?= $block->getApiUrl(); ?>",
+        });
+     </script>
 
-        <?php $shopperData = $block->getShopperData() ?>
-        <?php if ($shopperData): ?>
-        window.fera.push('setShopper', <?= $block->jsonEncode($shopperData); ?>);
-        <?php endif; ?>
-
-        window.fera.push('setCart', <?= $block->getCartJson(); ?>);
-    </script>
-    <?= $this->getChildHtml('fera_ai.footer.product.list'); ?>
     <?= $this->getChildHtml('fera_ai.footer.product.view'); ?>
-    <?= $this->getChildHtml('fera_ai.footer.checkout.success'); ?>
     <script async type="application/javascript" src="<?= $block->getJsUrl(); ?>"></script>
     <!--// END Fera.ai Integration Code //-->
 <?php endif; ?>

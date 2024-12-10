@@ -61,6 +61,11 @@ class Footer extends Template
         return $this->helper->getPublicKey();
     }
 
+    public function getAppUrl()
+    {
+        return $this->helper->getAppUrl();
+    }
+
     public function getApiUrl()
     {
         return $this->helper->getApiUrl();

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_controller_product_view">
+        <observer name="fera_ai_product_push" instance="Fera\Ai\Observer\Frontend\ProductPushEvent" />
+    </event>
+
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="fera_ai_order_push" instance="Fera\Ai\Observer\Frontend\OrderPushEvent" />
+    </event>
+</config>
