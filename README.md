@@ -11,8 +11,11 @@ You will be provided with a link to the latest install files. Follow the instruc
 
 *That's it!*. If you follow the instructions described then your store will automatically be configured to connected to the Fera.ai servers.
 
+### 3. Migrate to v3
+If you are using old version v2 we highly recommend to migrate to v3 by contacting our support team via email at help a-t fera dot ai.
+
 ## Usage
-Go to https://app.fera.ai/skills to customize your experience!
+Go to https://app.fera.ai/widgets to customize your experience!
 
 ## Help
 If you're seeing this repo you're probably a trusted developer - so just feel free to email help a-t fera dot ai with any questions.
