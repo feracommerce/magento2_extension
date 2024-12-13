@@ -10,7 +10,7 @@
             </general>
             <fera_ai_group>
                 <app_url>https://app.fera.ai/</app_url>
-                <api_url>https://app.fera.ai/api/v3</api_url>
+                <api_url>https://app.fera.ai/api/</api_url>
                 <js_url>https://cdn.fera.ai/js/v3/fera.js</js_url>
             </fera_ai_group>
         </fera_ai>
