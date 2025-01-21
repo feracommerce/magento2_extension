@@ -102,7 +102,10 @@ class OrderPushEvent implements ObserverInterface
                   ];
 
       if (!empty($order->getShippingAddress())) { $orderData['shipping_address'] = $this->getShippingData($order); }
-      if (!empty($order->getBillingAddress())) { $orderData['shipping_address'] = $this->getBillingData($order); }
+      if (!empty($order->getBillingAddress())) {
+        $orderData['shipping_address'] = $this->getBillingData($order);
+        $orderData['phone_number'] = $order->getBillingAddress()->getTelephone();
+      }
 
     $this->pushOrders($orderData);
 
@@ -120,6 +123,7 @@ class OrderPushEvent implements ObserverInterface
                     'external_id' => $customerId,
                     'name'    => $customerName,
                     'email' => $order->getCustomerEmail(),
+                    'phone_number' => $order->getBillingAddress()->getTelephone(),
                   ];
 
     return $customer;
